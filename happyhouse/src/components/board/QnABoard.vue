@@ -3,7 +3,7 @@
         <div class="input-group mb-3 float-right w-25">
             <input type="text" class="form-control" placeholder="어떤것이 궁금하세요??" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <b-button @click="searchContent" class="btn btn-outline-secondary" type="button" >Button</b-button>
+                <b-button @click="searchContent" >검색</b-button>
             </div>
         </div>
         <b-table
@@ -65,7 +65,24 @@ export default {
       items: items
     };
   },
-}
+  methods: {
+    rowClick(item) {
+      this.$router.push({
+        path: `/board/${item.content_id}`
+      });
+    },
+    writeContent() {
+      this.$router.push({
+        path: `/board/BoardCreate`
+      });
+    }
+  },
+  computed: {
+    rows() {
+      return this.items.length;
+    }
+  }
+};
 //   data () {
 //     return {
 //       searchQuery: '',
