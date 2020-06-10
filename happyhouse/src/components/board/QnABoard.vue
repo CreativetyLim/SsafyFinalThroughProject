@@ -3,48 +3,88 @@
         <div class="input-group mb-3 float-right w-25">
             <input type="text" class="form-control" placeholder="어떤것이 궁금하세요??" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                <b-button @click="searchContent" class="btn btn-outline-secondary" type="button" >Button</b-button>
             </div>
         </div>
-        <table class="table">
-            <caption>QnA 보드 생성중..</caption>
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">제목</th>
-                <th scope="col">작성자</th>
-                <th scope="col">작성일</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>위치 기반 프로그램 사용예시</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>게시판을 만드는 예시를 제공</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>자유게시판 이용방법 예시를</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                </tr>
-            </tbody>
-            </table>
+        <b-table
+            striped
+            hover
+            :items="items"
+            :per-page="perPage"
+            :current-page="currentPage"
+            :fields="fields"
+            @row-clicked="rowClick"
+        ></b-table>
+        <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage" align="center"></b-pagination>
+        <b-button @click="writeContent">글쓰기</b-button>
     </div>
 </template>
 
 <script>
+//import axios from 'axios'
+import data from '@/data'
 export default {
   name: 'QnABoard',
-  props: {
-    msg: String
-  }
+  data() {
+  let contentItems = data.Content.sort((a, b) => {
+      return b.content_id - a.content_id;
+    }); // 내림차순
+
+    // User 와 Content 의 user_id 의 같은 번호를 찾아 Content 에 기존자료 + 'user_name' 으로 추가한다.
+    let items = contentItems.map(contentItem => {
+      return {
+        ...contentItem,
+        user_name: data.User.filter(userItem => {
+          return contentItem.user_id === userItem.user_id;
+        })[0].name
+      };
+    });
+
+    return {
+      currentPage: 1, // 현재 페이지
+      perPage: 10, // 페이지당 보여줄 갯수
+      // bootstrap 'b-table' 필드 설정
+      fields: [
+        {
+          key: "content_id",
+          label: "번호"
+        },
+        {
+          key: "title",
+          label: "제목"
+        },
+        {
+          key: "user_name",
+          label: "글쓴이"
+        },
+        {
+          key: "created_at",
+          label: "작성일"
+        }
+      ],
+      items: items
+    };
+  },
 }
+//   data () {
+//     return {
+//       searchQuery: '',
+//       qnaColumns: ['qna_no', 'qna_title', 'qna_userid', 'qna_datetime'],
+//       qnaData:[]
+//     }
+//   },
+//   created(){
+//     this.load()
+//   },
+//   methods:{
+//     load(){
+//       axios.get('http://localhost:9999/happyhouse/qnaBoard')
+//       .then(res => {
+//         this.gridData = res.data;
+//       }).catch(e => {
+//         console.error(e)
+//       })
+//     }
+//   }
+// }
 </script>

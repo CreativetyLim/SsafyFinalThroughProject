@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router"; 
 import QnABoard from "@/components/board/QnABoard";
-//import BoardDetail from "@/components/board/BoardDetail";
-//import BoardCreate from "@/components/board/BoardCreate";
+import BoardDetail from "@/components/board/BoardDetail";
+import BoardCreate from "@/components/page/Create.vue";
+import BoardUpdate from "@/components/page/Update.vue";
 
 //import NotFound from "@/components/NotFound";
 
@@ -17,16 +18,21 @@ export default new VueRouter({
       name: "QnABoard",
       component: QnABoard
     },
-    // {
-    //   path: "/board/detail/:contentId",
-    //   name: "BoardDetail",
-    //   component: BoardDetail
-    // },
-    // {
-    //   path: "/board/create/:contentId?",
-    //   name: "BoardCreate",
-    //   component: BoardCreate
-    // },
+    {
+      path: "/board/detail/:contentId",
+      name: "BoardDetail",
+      component: BoardDetail
+    },
+    {
+      path: "/BoardCreate",
+      name: "BoardCreate",
+      component: BoardCreate
+    },
+    {
+      path:"/BoardUpdate",
+      name:"BoardUpdate",
+      component:BoardUpdate,
+    },
     // {
     //   path: "*",
     //   component: NotFound

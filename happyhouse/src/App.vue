@@ -2,7 +2,7 @@
   <div id="app">
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <Header/>
-    <router-view/>
+    <router-view id="contain"/>
   </div>
 </template>
 
@@ -25,5 +25,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#contain{
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
