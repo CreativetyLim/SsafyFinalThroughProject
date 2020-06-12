@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/qna")
 public class HomeTestController {
 	
-	@GetMapping("/index")
+	@GetMapping("/")
 	public String in() {
 		return "index";
 	}

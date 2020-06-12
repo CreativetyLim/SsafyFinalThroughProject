@@ -73,7 +73,7 @@ export default {
     },
     writeContent() {
       this.$router.push({
-        path: `/board/BoardCreate`
+        path: `/BoardCreate`
       });
     }
   },
