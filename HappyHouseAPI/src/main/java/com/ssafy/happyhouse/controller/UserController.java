@@ -20,11 +20,13 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+//	Get방식으로 회원 등록
 	@GetMapping("/register")
 	public String register() {
 		return "user";
 	}
 	
+//	Post방식으로 회원등록
 	@PostMapping("/register")
 	public String register(User user) {
 		userService.Register(user);
@@ -32,6 +34,7 @@ public class UserController {
 		return "index";
 	}
 	
+//	Get방식으로 아이디 중복확인
 	@GetMapping("/{searchid}")
 	public @ResponseBody String idCheck(@PathVariable("searchid") String sid) {
 		int result = userService.idCheck(sid);
