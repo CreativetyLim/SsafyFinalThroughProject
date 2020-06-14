@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.dao.HouseDAO">
+
+	
+	<select id="selectOne" parameterType="String" resultType="com.ssafy.happyhouse.dto.HouseDeal">
+		select * from housedeal where aptname like concat('%',#{s},'%')
+	</select>
+<!-- 
+
+ q
+ -->
+	<select id="selectAll" resultType="com.ssafy.happyhouse.dto.HouseDeal">
+		select * from housedeal limit 100
+	</select>
+	
+</mapper>
