@@ -13,13 +13,28 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	UserDAO userDAO;
 	@Override
-	public void Register(User user) {
-		userDAO.register(user);
+	public int Register(User user) {
+		return userDAO.register(user);
 	}
 
 	@Override
 	public int idCheck(String uId) {
 		return userDAO.idCheck(uId);
+	}
+
+	@Override
+	public int update(User user) {
+		return userDAO.update(user);
+	}
+
+	@Override
+	public int delete(String uId) {
+		return userDAO.delete(uId);
+	}
+
+	@Override
+	public User login(User user) {
+		return userDAO.login(user);
 	}
 
 }
