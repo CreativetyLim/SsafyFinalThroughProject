@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-4">
     <div class="form-group">
       <label for="qna_userid">작성자</label>
       <input
@@ -41,23 +41,26 @@
         등록
       </button>
     </div>
+    <div class="text-right">
+      <b-btn @click="checkHandler">글 등록</b-btn>
+    </div>
   </div>
 </template>
 
 <script>
 import http from '@/util/http-common';
 export default {
-  name: 'board-Form',
+  name: 'BoardCreate',
   props: {
     type: { type: String },
   },
   data: function() {
     return {
-      qna_no: '',
-      qna_datetime: '',
-      qna_userid: '',
-      qna_title: '',
-      qna_content: '',
+      qnaNo: '',
+      qnaDatetime: '',
+      qnaUserid: '',
+      qnaTitle: '',
+      qnaContent: '',
     };
   },
   methods: {
