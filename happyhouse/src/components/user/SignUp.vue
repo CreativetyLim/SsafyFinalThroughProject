@@ -9,6 +9,9 @@
                 ss="pl-3 pr-3" label="Name" prepend-icon="mdi-account"
                             required type="text" v-model="User.uName">
                         </v-text-field>
+                <div class="alert-danger" v-if="submitted && errors.has('uName')">
+                    {{errors.first('uName')}}
+                </div>
                 <v-text-field :rules="idRules" cla
                 ss="pl-3 pr-3" label="Id" prepend-icon="mdi-lock"
                             required type="text" v-model="User.uId">
@@ -41,7 +44,9 @@
 
 <script>
 //import {router} from "../../router/index";
-//import axios from 'axios';
+import REQUEST_JOIN from "../store/actions.js";
+import axios from 'axios';
+
 export default {
     name: 'SignUp',
     data() {
@@ -54,9 +59,35 @@ export default {
                 uName: '',
                 uGender: '',
                 uTel: '',
-                uAddr: ''
+                uAddr: '',
+                role: 'USER',
             }
         }
     },
+    Rules: {
+        idRules: [
+            v => !!v || '아이디가 없습니다.',
+        ],
+        nameRules: [
+            v => !!v || '이름이 없습니다.',
+        ],
+        pwRules: [
+             v => !!v || '패스워드가 없습니다.',
+        ]
+    },
+    computed: {
+        ...mapState([
+            'idRules',
+            'nameRules',
+            'pwRules',
+            'loadingState',
+        ])
+    },
+    methods: {
+        ...mapActions(['REQUEST_JOIN']),
+        userRegister(){
+            this.REQUEST_JOIN(this.User);
+        }
+    }
 }
 </script>
