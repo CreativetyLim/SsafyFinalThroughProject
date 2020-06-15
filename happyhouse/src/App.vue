@@ -15,12 +15,14 @@
 
 <script>
 import Header from '@/components/Header';
+import Modal from '@/components/Modal';
 
 export default {
   name: 'App',
 
   components: {
     Header,
+    Modal,
   },
 
   data: () => ({

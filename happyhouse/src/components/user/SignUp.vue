@@ -43,9 +43,8 @@
 </template>
 
 <script>
-//import {router} from "../../router/index";
-import REQUEST_JOIN from "../store/actions.js";
-import axios from 'axios';
+import {router} from "../../router/index";
+import Modal from "../Modal";
 
 export default {
     name: 'SignUp',
@@ -61,32 +60,35 @@ export default {
                 uTel: '',
                 uAddr: '',
                 role: 'USER',
-            }
+            },
+            validatePassword: '',
+            validatePasswordRules: [
+                v => v === this.User.uPw || '비밀번호가 맞지 않습니다.'
+            ]
         }
     },
-    Rules: {
-        idRules: [
-            v => !!v || '아이디가 없습니다.',
-        ],
-        nameRules: [
-            v => !!v || '이름이 없습니다.',
-        ],
-        pwRules: [
-             v => !!v || '패스워드가 없습니다.',
-        ]
-    },
     computed: {
-        ...mapState([
-            'idRules',
-            'nameRules',
-            'pwRules',
-            'loadingState',
-        ])
+        idRules() {
+            return this.$store.state.common.idRules;
+        },
+        pwRules() {
+            return this.$store.state.common.pwRules;
+        },
+        nameRules() {
+            return this.$store.state.common.nameRules;
+        },
+        loadingState() {
+            return this.$store.state.common.loadingState;
+        },
+    },
+    components: {
+        Modal,
     },
     methods: {
-        ...mapActions(['REQUEST_JOIN']),
-        userRegister(){
-            this.REQUEST_JOIN(this.User);
+        userRegister() {
+            if(this.$refs.form.validate()){
+                this.$store.dispatch('REQUEST_JOIN', this.User);
+            }
         }
     }
 }
