@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeTestController {
 	
 	@GetMapping("/")
-	public String in() {
-		System.out.println("sex");
+	public String index() {
 		return "location";
 	}
 	
