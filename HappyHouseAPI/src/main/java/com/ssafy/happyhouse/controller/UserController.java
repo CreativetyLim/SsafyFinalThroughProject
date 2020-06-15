@@ -60,7 +60,7 @@ public class UserController {
 		return result;
 	}
 	
-//	로그인
+//	Post 로그인
 	@PostMapping("/login")
 	public User login(User user, HttpServletRequest req) {
 		User result = userService.login(user);
@@ -74,7 +74,7 @@ public class UserController {
 		return result;
 	}
 	
-//	로그아웃
+//	Get 로그아웃
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
