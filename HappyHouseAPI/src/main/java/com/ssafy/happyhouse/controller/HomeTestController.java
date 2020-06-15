@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/test")
 public class HomeTestController {
 	
 	@GetMapping("/")
 	public String in() {
-		return "index";
+		System.out.println("sex");
+		return "location";
 	}
 	
 }
