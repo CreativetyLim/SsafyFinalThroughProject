@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.dao.BoardDAO">
+
+	 <!-- 게시글 전체 조회 -->
+	<select id="selectBoard" resultType="com.ssafy.happyhouse.dto.Board">
+		select board_no as boardNo,
+				board_title as boardTitle,
+				board_content as boardContent,
+				board_userid as boardUserid,
+				board_datetime as boardDatetime
+		  from board_board 
+		 order by board_no desc;
+	</select>
+	
+	<!-- 게시글 입력 -->
+	<insert id="regist">
+		insert into board_board(board_userid,board_title,board_content,board_datetime) 
+		values(#{boardUserid}, #{boardTitle}, #{boardContent}, now())
+	</insert>
+	
+	
+	<!-- 게시글 수정 -->
+	<update id="update">
+		update board_board 
+		set board_userid = #{boardUserid},
+			board_title =  #{boardTitle},
+			board_content =  #{boardContent},
+			board_datetime =  now()
+		where  board_no = #{boardNo}
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="delete">
+		delete from board_board 
+		where board_no = #{board_no}
+	</delete>
+	
+	<!-- 게시글 검색 -->
+	<select id="selectOne" resultType="com.ssafy.happyhouse.dto.Board">
+		select  board_no as boardNo,
+				board_title as boardTitle,
+				board_content as boardContent,
+				board_userid as boardUserid,
+				board_datetime as boardDatetime,
+		from board_board
+		where board_title like concat('%',#{search},'%')
+	</select>
+</mapper>
+
