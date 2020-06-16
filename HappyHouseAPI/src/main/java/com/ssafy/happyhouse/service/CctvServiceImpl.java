@@ -18,7 +18,7 @@ public class CctvServiceImpl implements CctvService{
 
 	@Autowired
 	CctvDAO dao;
-	String file = "";
+	String file = "/src/main/resources/static/json/cctvdata.json";
 	
 	@Override
 	public void regist(List<cctv> list) {
@@ -33,7 +33,6 @@ public class CctvServiceImpl implements CctvService{
 		
 		if(true)
 		return dao.list();
-		file= "cctvdata.json";
 		List<cctv> list= new LinkedList<>();
 		try {
 			JSONParser parser = new JSONParser();
@@ -68,8 +67,6 @@ public class CctvServiceImpl implements CctvService{
 	@Override
 	public List<cctv> search(String name) {
 		// TODO Auto-generated method stub
-		file= "cctvdata.json";
-		file="";
 		List<cctv> list= new LinkedList<>();
 		try {
 			JSONParser parser = new JSONParser();

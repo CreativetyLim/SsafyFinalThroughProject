@@ -27,8 +27,7 @@ public class CctvController {
 	/////////////////////////////////// 처음 시작할때 json file 파싱 해서 cctv 위치 db에 등록하기 /////////////////
 	@PostMapping("regist")
 	public void regist() {
-		String file= "cctvdata.json";
-		file="";
+		String file= "/src/main/resources/static/json/cctvdata.json";
 		try {
 			JSONParser parser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(file));
