@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mappers/emp.xml -->
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+      "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.dao.FSelectBoxDAO"> <!-- mybatis는 namespace필수!! -->
+
+   <!-- 전체 조회 -->
+   <select id="selectSido" resultType="com.ssafy.happyhouse.dto.SidoCodeDTO">
+      SELECT left(sido_code,2) sido_code, sido_name FROM sidocode
+      ORDER BY sido_code
+   </select>
+   
+   <select id="selectUserSido" resultType="com.ssafy.happyhouse.dto.SidoCodeDTO">
+      SELECT left(sido_code,2) sido_code, sido_name FROM sidocode
+      Where left(sido_code, 2) = #{sido}
+      ORDER BY sido_code
+   </select>
+   
+   
+   <select id="selectGugun" resultType="com.ssafy.happyhouse.dto.SidoCodeDTO">
+      SELECT left(gugun_code,5) gugun_code, gugun_name FROM guguncode
+      where left(gugun_code,2) = #{sido}
+      ORDER BY gugun_code
+   </select>
+   
+   <select id="selectDong" resultType="com.ssafy.happyhouse.dto.HouseInfoDTO">
+     SELECT distinct dong, code FROM houseinfo
+     where code = #{gugun}
+     ORDER BY dong
+   </select>
+   
+   <select id="selectApt" resultType="com.ssafy.happyhouse.dto.HouseInfoDTO">
+    SELECT * FROM houseinfo 
+    WHERE dong = #{dong}
+    ORDER BY AptName
+   </select>
+</mapper>
+
+
