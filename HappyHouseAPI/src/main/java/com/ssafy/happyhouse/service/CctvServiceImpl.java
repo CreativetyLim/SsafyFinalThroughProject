@@ -30,7 +30,7 @@ public class CctvServiceImpl implements CctvService{
 
 	@Override
 	public List<cctv> list() {
-		file= "C:\\Users\\t\\Desktop\\exeljar파일\\전국CCTV표준데이터.json";
+		file= "cctvdata.json";
 		List<cctv> list= new LinkedList<>();
 		try {
 			JSONParser parser = new JSONParser();
