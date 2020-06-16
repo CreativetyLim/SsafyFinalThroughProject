@@ -8,6 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +32,7 @@ public class CctvController {
 		String file= "/src/main/resources/static/json/cctvdata.json";
 		try {
 			JSONParser parser = new JSONParser();
-			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(file));
+			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader( ResourceUtils.getFile("classpath:cctvdata.json")));
 			
 			JSONArray fields = (JSONArray) jsonObject.get("fields"); 
 			JSONArray records = (JSONArray) jsonObject.get("records");
