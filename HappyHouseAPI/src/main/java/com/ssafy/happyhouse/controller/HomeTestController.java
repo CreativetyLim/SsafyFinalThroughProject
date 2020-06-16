@@ -10,14 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/test")
 public class HomeTestController {
 	
-	@GetMapping("/map")
-	public String in() {
-		return "location";
-	}
-	
 	@GetMapping("/home")
-	public String test() {
-		return "direction";
+	public String in() {
+		return "kakaoMap";
 	}
 	
 }

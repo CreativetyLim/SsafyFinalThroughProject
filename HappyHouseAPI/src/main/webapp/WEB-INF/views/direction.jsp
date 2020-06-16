@@ -10,7 +10,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Main</title>
 
-
+<!-- CSS here -->
+      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/magnific-popup.css">
+      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/slick.css">
+      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/responsive.css">
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
@@ -19,7 +24,7 @@
 <script>
 
         function markerbase() {
-            document.location.href = "${root}/apt.do?act=markerbase"
+            document.location.href = "${root}/api/apt"
         }
        
     </script>
@@ -227,6 +232,18 @@
    <!-- section end -->
    
 <!-- JS here -->
+      <script src="<c:url value="/assets/js/slick.min.js"/>"></script>
+      <script src="<c:url value="/assets/js/jquery.magnific-popup.js"/>"></script>
       
+<<<<<<< HEAD
+      
+      <!-- Jquery Plugins, main Jquery -->   
+        <script src="<c:url value="/assets/js/plugins.js"/>"></script>
+        <script src="<c:url value="/assets/js/main.js"/>"></script>
+
+
+        
+=======
+>>>>>>> branch 'master' of https://github.com/CreativetyLim/SsafyFinalThroughProject.git
 </body>
 </html>
