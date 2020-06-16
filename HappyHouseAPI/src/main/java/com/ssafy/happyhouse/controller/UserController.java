@@ -34,22 +34,13 @@ public class UserController {
 	@PostMapping("/register")
 	public int register(User user) {
 		int result = userService.Register(user);
-//		어디로 반환해야 할지 몰라서 일단 index로 했는데 추후에 수정하자
 		return result;
-	}
-	
-//	Get방식으로 아이디 중복확인
-	@GetMapping("/{searchid}")
-	public @ResponseBody String idCheck(@PathVariable("searchid") String sid) {
-		int result = userService.idCheck(sid);
-		return result+"";
 	}
 	
 //	회원정보 수정
 	@PutMapping("/editUser")
 	public int editUser(User user) {
 		int result = userService.Register(user);
-		
 		return result;
 	}
 	
@@ -77,8 +68,7 @@ public class UserController {
 //	Get 로그아웃
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
-		session.invalidate();
-		
+		session.invalidate();	
 		return "/index";
 	}
 }
