@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2m2020-06-16 11:15:11.002[0;39m [32m INFO[0;39m [35m28420[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 [2m2020-06-16 11:15:11.008[0;39m [32m INFO[0;39m [35m28420[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 [2m2020-06-16 11:15:13.513[0;39m [32m INFO[0;39m [35m28420[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$981f6675] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
@@ -2630,3 +2631,5 @@ Action:
 
 Identify and stop the process that's listening on port 9999 or configure this application to listen on another port.
 
+=======
+>>>>>>> branch 'master' of https://github.com/CreativetyLim/SsafyFinalThroughProject
