@@ -30,6 +30,9 @@ public class CctvServiceImpl implements CctvService{
 
 	@Override
 	public List<cctv> list() {
+		
+		if(true)
+		return dao.list();
 		file= "cctvdata.json";
 		List<cctv> list= new LinkedList<>();
 		try {

@@ -10,8 +10,7 @@ public class HomeTestController {
 	
 	@GetMapping("/home")
 	public String in() {
-		System.out.println("hi");
-		return "direction";
+		return "kakaoMap";
 	}
 	
 }
