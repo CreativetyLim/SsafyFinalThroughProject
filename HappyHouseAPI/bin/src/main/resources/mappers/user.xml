@@ -6,6 +6,7 @@
 	<insert id="register">
 	insert into User(uId, uPw, reuPw, uName, uGender, uTel, uAddr) 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	values (#{uId}, #{uPw}, #{reuPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
 	</insert>
 	
@@ -55,4 +56,43 @@
 	</select>
 	
 >>>>>>> refs/remotes/wanny/master
+=======
+	values (#{uId}, #{uPw}, #{reuPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
+	</insert>
+	
+	<!-- 아이디 체크 -->
+	<select id="idCheck" resultType="int">
+	select count(uId)
+	from User
+	where uId = ${uId}
+	</select>
+	
+	<!-- 회원정보 수정 -->
+	<update id="update">
+		update User
+		set uId = #{uId},
+			uPw = #{uPw},
+			reuPw = #{uPw},
+			uName = #{uName},
+			uGender = #{uGender},
+			uTel = #{uTel},
+			uAddr = #{uAddr}
+		where uId = #{uId}
+	</update>
+	
+	<!-- 회원정보 삭제 -->
+	<delete id="delete">
+		delete from User
+		where uId = ${uId}
+	</delete>
+	
+	<!-- 로그인 -->
+	<select id="login" resultType="com.ssafy.happyhouse.dto.User">
+		select uId, uPw, reuPw
+		from User
+		where uId = #{uId}
+			and uPw = #{uPw}
+			and reuPw = #{reuPw}		
+	</select>
+>>>>>>> branch 'master' of https://github.com/CreativetyLim/SsafyFinalThroughProject
 </mapper>

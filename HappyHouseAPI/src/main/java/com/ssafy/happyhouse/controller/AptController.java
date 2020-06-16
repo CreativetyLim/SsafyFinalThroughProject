@@ -30,6 +30,4 @@ public class AptController {
 	public List<HouseDeal> search(String word) {
 		return ser.selectOne(word);
 	}
-	
-	
 }

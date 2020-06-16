@@ -11,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="data in qnaDatas" v-bind:key="data.qna_no">
+                <tr v-for="data in qnaDatas" v-bind:key="data.qnaNo">
                     <td scope="row">{{data.qnaNo}}</td>
                     <td>{{data.qnaTitle}}</td>
                     <td>{{data.qnaUserid}}</td>
