@@ -17,3 +17,4 @@ public interface QnADAO {
 	public int deleteReply(QnA qna);
 	public List<QnA> selectOne(String search);
 }
+

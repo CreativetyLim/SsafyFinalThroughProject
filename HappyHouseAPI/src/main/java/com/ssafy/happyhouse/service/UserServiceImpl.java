@@ -18,11 +18,6 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public int idCheck(String uId) {
-		return userDAO.idCheck(uId);
-	}
-
-	@Override
 	public int update(User user) {
 		return userDAO.update(user);
 	}
