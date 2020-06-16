@@ -8,10 +8,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ssafy.happyhouse.dao.CctvDAO;
 import com.ssafy.happyhouse.dto.cctv;
 
+@Service
 public class CctvServiceImpl implements CctvService{
 
 	@Autowired
@@ -63,7 +65,8 @@ public class CctvServiceImpl implements CctvService{
 	@Override
 	public List<cctv> search(String name) {
 		// TODO Auto-generated method stub
-		file= "C:\\Users\\t\\Desktop\\exeljar파일\\전국CCTV표준데이터.json";
+		file= "cctvdata.json";
+		file="";
 		List<cctv> list= new LinkedList<>();
 		try {
 			JSONParser parser = new JSONParser();
