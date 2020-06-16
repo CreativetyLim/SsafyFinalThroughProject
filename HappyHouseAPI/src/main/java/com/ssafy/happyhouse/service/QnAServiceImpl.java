@@ -72,3 +72,4 @@ public class QnAServiceImpl implements QnAService {
 		return dao.deleteReply(qna);
 	}
 }
+

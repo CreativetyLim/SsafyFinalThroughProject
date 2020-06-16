@@ -67,3 +67,4 @@ public class QnA {
 				+ replyDatetime + ", replyUserid=" + replyUserid + "]";
 	}
 }
+
