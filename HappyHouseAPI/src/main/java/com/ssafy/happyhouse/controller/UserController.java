@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ssafy.happyhouse.dto.User;
 import com.ssafy.happyhouse.service.UserService;
 
-@CrossOrigin(origins = { "*" }, maxAge = 6000)
+@CrossOrigin(origins="http://192.168.0.70:8080")
 @RestController
 @RequestMapping("/api/user")
 public class UserController {

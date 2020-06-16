@@ -70,7 +70,6 @@ export default {
                 uGender: '',
                 uTel: '',
                 uAddr: '',
-                role: 'USER',
             },
             validatePassword: '',
             validatePasswordRules: [

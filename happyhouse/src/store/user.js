@@ -38,10 +38,10 @@ const mutations = {
 };
 
 const actions = {
-    async REQUEST_JOIN(context, user) {
+    async REQUEST_JOIN(context, User) {
         try {
             context.commit('START_LOADING');
-            const response = await requestJoinMember(user);
+            const response = await requestJoinMember(User);
             context.commit('SET_SNACKBAR', setSnackBarInfo('회원가입이 완료되었습니다!', 'info', 'top'));
             context.commit('END_LOADING');
             router.push('/login');
@@ -51,10 +51,10 @@ const actions = {
             context.commit('OPEN_MODAL', {title: '회원가입에 실패', content: e.response.data.message, option1: '닫기',});
         }
     },
-    async REQUEST_LOGIN(context, user) {
+    async REQUEST_LOGIN(context, User) {
         try {
             context.commit('START_LOADING');
-            const response = await requestLogin(user);
+            const response = await requestLogin(User);
             setTokenInLocalStorage(response.data);
 
             const getMember = await queryMember();
