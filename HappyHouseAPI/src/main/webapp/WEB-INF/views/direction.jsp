@@ -235,6 +235,7 @@
       <script src="<c:url value="/assets/js/slick.min.js"/>"></script>
       <script src="<c:url value="/assets/js/jquery.magnific-popup.js"/>"></script>
       
+<<<<<<< HEAD
       
       <!-- Jquery Plugins, main Jquery -->   
         <script src="<c:url value="/assets/js/plugins.js"/>"></script>
@@ -242,5 +243,7 @@
 
 
         
+=======
+>>>>>>> branch 'master' of https://github.com/CreativetyLim/SsafyFinalThroughProject.git
 </body>
 </html>

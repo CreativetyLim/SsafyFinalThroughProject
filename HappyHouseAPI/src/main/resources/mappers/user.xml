@@ -4,23 +4,15 @@
 <mapper namespace="com.ssafy.happyhouse.dao.UserDAO">
 	<!-- 회원정보 등록 -->
 	<insert id="register">
-	insert into User(uId, uPw, reuPw, uName, uGender, uTel, uAddr) 
-	values (#{uId}, #{uPw}, #{reuPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
+	insert into User(uId, uPw, uName, uGender, uTel, uAddr) 
+	values (#{uId}, #{uPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
 	</insert>
-	
-	<!-- 아이디 체크 -->
-	<select id="idCheck" resultType="int">
-	select count(uId)
-	from User
-	where uId = ${uId}
-	</select>
 	
 	<!-- 회원정보 수정 -->
 	<update id="update">
 		update User
 		set uId = #{uId},
 			uPw = #{uPw},
-			reuPw = #{uPw},
 			uName = #{uName},
 			uGender = #{uGender},
 			uTel = #{uTel},
@@ -36,10 +28,9 @@
 	
 	<!-- 로그인 -->
 	<select id="login" resultType="com.ssafy.happyhouse.dto.User">
-		select uId, uPw, reuPw
+		select uId, uPw
 		from User
 		where uId = #{uId}
-			and uPw = #{uPw}
-			and reuPw = #{reuPw}		
+			and uPw = #{uPw}	
 	</select>
 </mapper>

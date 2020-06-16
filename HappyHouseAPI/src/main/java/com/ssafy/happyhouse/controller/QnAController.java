@@ -2,7 +2,6 @@ package com.ssafy.happyhouse.controller;
 
 import java.util.List;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,7 @@ import com.ssafy.happyhouse.dto.QnA;
 import com.ssafy.happyhouse.service.QnAService;
 
 import io.swagger.annotations.ApiOperation;
+
 //http://localhost:9999/happyhouse/swagger-ui.html
 @CrossOrigin(origins = { "*" }, maxAge = 6000)
 @RestController
@@ -33,7 +33,6 @@ public class QnAController {
 
 	@Autowired
 	private QnAService qnaService;
-	
 	
 ///////////////////////////////////////게시물 관련 ///////////////////////////////////////////////////////	
 	// 전체 게시물 보기
@@ -101,3 +100,4 @@ public class QnAController {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     
 }
+
