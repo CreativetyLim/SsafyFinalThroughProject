@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const config = {
-    baseUrl: 'http:localhost:9999/api/user'
+    baseUrl: 'http://localhost:9999/happyhouse/api/user'
 }
 function requestJoinMember(User) {
     return axios.post(`${config.baseUrl}/register`, User);

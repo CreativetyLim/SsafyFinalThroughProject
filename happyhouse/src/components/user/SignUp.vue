@@ -21,24 +21,32 @@
                     ss="pl-3 pr-3" label="Password" prepend-icon="mdi-lock"
                                 required type="password" v-model="User.uPw">
                             </v-text-field>
-                    <v-text-field :rules="repwRules" cla
+                    <v-text-field :rules="validatePasswordRules" cla
                     ss="pl-3 pr-3" label="Confirm Password" prepend-icon="mdi-lock"
-                                required type="password" v-model="User.reuPw">
+                                required type="password" v-model="validatePassword">
                             </v-text-field>
                     <v-radio-group v-model="User.uGender" prepend-icon="mdi-account-multiple" row>
                         <v-icon left medium></v-icon>
                         <v-label prepend-icon="mdi-account-multiple">Gender</v-label>
-                        <v-radio label="남성" value="m" class="text-center"></v-radio>
-                        <v-radio label="여성" value="w" class="text-center"></v-radio>
+                        <v-radio label="남성" value="M" class="text-center"></v-radio>
+                        <v-radio label="여성" value="F" class="text-center"></v-radio>
                     </v-radio-group>
                     <v-text-field :rules="telRules" cla
                     ss="pl-3 pr-3" label="Tel" prepend-icon="mdi-phone"
-                                required type="text" v-model="User.uTel" placeholder="01012341234">
+                                required type="text" v-model="uTel" placeholder="01012341234" @keyup.enter="userRegister">
                             </v-text-field>
                     <v-btn :loading="loadingState" @click="userRegister" class="mt-3" color="indigo" outlined>
                                 REGISTER
                             </v-btn>
                 </v-form>
+                <div>
+                    <ul>
+                        <li>{{User.uName}}</li>
+                        <li>{{User.uId}}</li>
+                        <li>{{User.uPw}}</li>
+                        <li>{{User.uGender}}</li>
+                    </ul>
+                </div>
             </div>
             <Modal/>
         </v-row>
@@ -51,8 +59,8 @@ import Modal from "../Modal";
 
 export default {
     name: 'SignUp',
-    data() {
-        return{
+    data () {
+        return {
             dialog: false,
             User: {
                 uId: '',
@@ -64,21 +72,25 @@ export default {
                 uAddr: '',
                 role: 'USER',
             },
+            validatePassword: '',
+            validatePasswordRules: [
+                v => v === this.member.password || '비밀번호가 맞지 않습니다..'
+            ]
         }
     },
     // computed: {
     //     idRules() {
     //         return this.$store.state.common.idRules;
     //     },
-    //     pwRules() {
-    //         return this.$store.state.common.pwRules;
-    //     },
-    //     nameRules() {
-    //         return this.$store.state.common.nameRules;
-    //     },
-    //     loadingState() {
-    //         return this.$store.state.common.loadingState;
-    //     },
+    // pwRules() {
+    //     return this.$store.state.common.passwordRules;
+    // },
+    // nameRules() {
+    //     return this.$store.state.common.nameRules;
+    // },
+    // loadingState() {
+    //     return this.$store.state.common.loadingState;
+    // },
     // },
     components: {
         Modal,
