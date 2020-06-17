@@ -14,4 +14,14 @@ public class MapController {
 	public String map() {
 		return "location";
 	}
+	
+	@GetMapping("/cctv")
+	public String CCTV() {
+		return "kakaoMap";
+	}
+	
+	@GetMapping("/find")
+	public String find() {
+		return "findWay";
+	}
 }

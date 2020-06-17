@@ -34,7 +34,6 @@ public class UserController {
 	@PostMapping("/register")
 	public int register(User user) {
 		int result = userService.register(user);
-		System.out.println(user.getuId()+" 왜 안되냐");
 		return result;
 	}
 	
@@ -54,15 +53,11 @@ public class UserController {
 	
 //	Post 로그인
 	@PostMapping("/login")
-	public User login(User user, HttpServletRequest req) {
-		User result = userService.login(user);
+	public int login(User user, HttpServletRequest req) {
+		int result = userService.login(user);
 		HttpSession session = req.getSession();
+		session.setAttribute("user", result);
 		
-		if(result == null) {
-			session.setAttribute("user", null);
-		}else {
-			session.setAttribute("user", result);
-		}
 		return result;
 	}
 	
