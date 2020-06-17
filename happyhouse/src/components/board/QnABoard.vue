@@ -57,6 +57,7 @@
         </div>
         
         <b-table
+            class="text-center"
             hover
             :items="items"
             :per-page="perPage"

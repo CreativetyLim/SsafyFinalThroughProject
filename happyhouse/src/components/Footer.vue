@@ -1,5 +1,5 @@
 <template>
-    <v-footer app class="theme--dark" fixed><span class="mx-auto">Copyright © {{new Date() | moment('YYYY')}} All Rights Reserved.</span>
+    <v-footer app class="theme--dark" fixed><span class="mx-auto">Copyright © {{new Date() | moment('YYYY')}} SSAFY 광주 200조.</span>
     </v-footer>
 </template>
 
