@@ -5,8 +5,6 @@
 	<!-- 회원정보 등록 -->
 	<insert id="register">
 	insert into User(uId, uPw, reuPw, uName, uGender, uTel, uAddr) 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	values (#{uId}, #{uPw}, #{reuPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
 	</insert>
 	
@@ -44,21 +42,6 @@
 			and uPw = #{uPw}
 			and reuPw = #{reuPw}		
 	</select>
-=======
-	values (#{uId}, #uPw}, #{reuPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
-	</insert>
-	
-	<!-- 아이디 체크 -->
-	<select id="idCheck" resultType="int">
-	select count(uId)
-	from User
-	where uId = ${uId}
-	</select>
-	
->>>>>>> refs/remotes/wanny/master
-=======
-	values (#{uId}, #{uPw}, #{reuPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
-	</insert>
 	
 	<!-- 아이디 체크 -->
 	<select id="idCheck" resultType="int">
@@ -94,5 +77,4 @@
 			and uPw = #{uPw}
 			and reuPw = #{reuPw}		
 	</select>
->>>>>>> branch 'master' of https://github.com/CreativetyLim/SsafyFinalThroughProject
 </mapper>
