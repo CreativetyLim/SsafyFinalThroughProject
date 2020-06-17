@@ -5,34 +5,63 @@
                 로 그 인
             </h3>
             <v-form class="pa-5 text-center" ref="form">
-                <v-text-field :rules="idRules" cla
+                <v-text-field cla
                 ss="pl-3 pr-3" label="Id" prepend-icon="mdi-lock"
                             required type="text" v-model="User.uId">
                         </v-text-field>
-                <v-text-field :rules="pwRules" cla
+                <v-text-field cla
                 ss="pl-3 pr-3" label="Password" prepend-icon="mdi-lock"
                             required type="password" v-model="User.uPw">
                         </v-text-field>
-                <v-btn :loading="loadingState" @click="userLogin" class="mt-3" color="indigo" outlined>
+                <v-btn @click="userLogin" class="mt-3" color="indigo" outlined>
                             Login
                         </v-btn>
             </v-form>
         </div>
+        <b-alert variant="danger" :show="showAlert">{{ errMsg }}</b-alert>
     </v-row>
 </template>
 
 <script>
 //import {router} from "../../router/index";
-//import axios from 'axios';
+import axios from 'axios';
 export default {
     name: 'Login',
-    data() {
-        return{
-            dialog: false,
+    data() {  
+        return {
             User: {
                 uId: '',
                 uPw: '',
+            },
+            showAlert: false,
+            errMsg: ''
+        } 
+    },
+    methods: {
+        userLogin(){
+            if ( this.uId == '' ) {
+                this.showAlert = true;
+                this.errMsg = 'Please enter your username';
+                return;
             }
+            if ( this.uPw == '' ) {
+                this.showAlert = true;
+                this.errMsg = 'Please enter the password';
+                return;
+            }
+            this.showAlert = false;
+
+            axios.Post(`http://localhost:9999/happyhouse/api/user/login`, {
+                uId: this.User.uId,
+                uPw: this.User.uPw
+            })
+            .then(res => {
+                alert("로그인 되었습니다.");
+                console.dir("success")
+                console.log(res)
+            }).catch(e => {
+                console.error(e)
+            })
         }
     },
 }
