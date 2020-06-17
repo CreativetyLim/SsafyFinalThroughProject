@@ -15,4 +15,9 @@ public class HomeTestController {
 		return "kakaoMap";
 	}
 	
+	@GetMapping("/index")
+	public String d() {
+		return "direction";
+	}
+	
 }

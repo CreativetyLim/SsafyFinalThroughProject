@@ -36,7 +36,6 @@ public class CctvController {
 			
 			JSONArray fields = (JSONArray) jsonObject.get("fields"); 
 			JSONArray records = (JSONArray) jsonObject.get("records");
-			
 			List<cctv> list= new LinkedList<>();
 			cctv tv ;
 			for(int i=0; i<records.size(); i++) {
