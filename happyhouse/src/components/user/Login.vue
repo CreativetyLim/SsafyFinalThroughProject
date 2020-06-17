@@ -4,35 +4,63 @@
             <h3 class="mt-3 font-weight-bold text-center py-3 black--text">
                 로 그 인
             </h3>
-            <v-form class="pa-5 text-center" ref="form">
-                <v-text-field :rules="idRules" cla
+            <v-form class="pa-5 text-center" ref="form" @submit.prevent="onSubmit(uId, uPw)">
+                <v-text-field cla
                 ss="pl-3 pr-3" label="Id" prepend-icon="mdi-lock"
-                            required type="text" v-model="User.uId">
+                            required type="text" v-model="uId">
                         </v-text-field>
-                <v-text-field :rules="pwRules" cla
+                <v-text-field cla
                 ss="pl-3 pr-3" label="Password" prepend-icon="mdi-lock"
-                            required type="password" v-model="User.uPw">
+                            required type="password" v-model="uPw">
                         </v-text-field>
-                <v-btn :loading="loadingState" @click="userLogin" class="mt-3" color="indigo" outlined>
+                <v-btn type="submit" class="mt-3" color="indigo" outlined>
                             Login
                         </v-btn>
             </v-form>
         </div>
+        <b-alert variant="danger" :show="showAlert">{{ errMsg }}</b-alert>
     </v-row>
 </template>
 
 <script>
-//import {router} from "../../router/index";
-//import axios from 'axios';
 export default {
     name: 'Login',
-    data() {
-        return{
-            dialog: false,
-            User: {
-                uId: '',
-                uPw: '',
+    data() {  
+        return {   
+            uId: '',
+            uPw: '',
+            msg: '',
+            showAlert: false,
+            errMsg: ''
+        } 
+    },
+    methods: {
+        onSubmit(){
+            if ( this.uId == '' ) {
+                this.showAlert = true;
+                this.errMsg = 'Please enter your username';
+                return;
             }
+            if ( this.uPw == '' ) {
+                this.showAlert = true;
+                this.errMsg = 'Please enter the password';
+                return;
+            }
+            this.showAlert = false;
+            this.$store.dispatch('LOGIN', {uId, uPw})
+                .then(() => this.redirect())
+                .catch(({message}) => this.msg = message)
+            },
+            redirect(){
+                const {search} = window.location
+                const tokens = search.replace(/^\?/, '').split('&')
+                const {returnPath} = tokens.reduce((qs, tkn) => {
+                const pair = tkn.split('=')
+                qs[pair[0]] = decodeURIComponent(pair[1])
+                return qs
+            }, {})
+
+            this.$router.push(returnPath)
         }
     },
 }

@@ -3,59 +3,39 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-	#top{
-		background-color: pink;
-		text-align: center;
-		color:white;
-		height: 60px;
-		margin-top: 0px;
-		vertical-align: middle;
-		padding: 1px;
-		font-size:x-large  ;
-		 font-family: 'Nanum Pen Script', cursive;
-	}
-	h2{
-	
-		margin: 0px;
-		padding:0px;
-	}
-	#default-select{
-		margin: 50px auto;
-		margin-bottom: 20px;
-	}
-	section{
-		width:100%;
-		height: 400px;
-	}
-	
-	#tablecover{
-		width:50%;
-		float:left;
-		margin-left: auto; 
-		margin-right: auto;
-		margin-top : 30px;
-	}
-	#map{
-	border: black solid 1px;
-	width:50%;
-	margin-left: auto; 
-		margin-right: auto;
-		margin-top : 30px;
-	}
-</style>
-<title>여성안심귀가서비스</title>
+<meta charset="UTF-8">
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d116344b3fb196256cab17af15427d19&libraries=services"></script>
 <script type="text/javascript"
-	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d116344b3fb196256cab17af15427d19"></script>
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d116344b3fb196256cab17af15427d19">
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"
 	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-	crossorigin="anonymous"></script>
+	crossorigin="anonymous">
+</script>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+#map{
+	border: black solid 1px;
+	width:50%;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top : 30px;
+}
+</style>
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+<title>여성안심귀가서비스</title>
+
 <script>
 	var map;
 	function functionDirection(){
@@ -317,44 +297,87 @@
 	</script>
 </head>
 <body>
-	<div id="top">
-		<h2>Happy House - 안전한 우리집</h2>
-	</div>
+<div>
+	<jsp:include page="header.jsp"></jsp:include>
+	
 	<input type="hidden" name="userid" id="userid" value="${userinfo}">
 	<input type="hidden" name="userid" id="usersido" value="${usersido}">
 	<input type="hidden" name="userid" id="usergugun" value="${usergugun}">
 	<input type="hidden" name="userid" id="userdong" value="${userdong}">
 
-	<section id="index_section">
-			<div class="card-body">
-				<blockquote>
-				<div class="form-select" id="default-select" align="center" style=" width:50%;">
-					<p>시도:<p> <select class="form-control col-md-4" id="sido">
-						<option value="0">선택</option>
-							</select> <p>구군:<p> <select class="form-control col-md-4" id="gugun">
-						<option value="0">선택</option>
-						</select> <p>읍면동:<p> <select class="form-control col-md-4"  id="dong">
-						<option value="0">선택</option>
-						</select>
-				</div>
-				</blockquote>
+	<section id="index_section" >
+		<div class="card w-50 p-4 mt-4 mb-4" style="margin-left:auto; margin-right: auto">
+			<div style="text-align: center">
+				<h2 style=""font-family: 'Jua', sans-serif;>시 군 읍.동을 선택해주세요..</h2>
 			</div>
-	</section>
-	<div id="tablecover">
-					<table align="left" class="table table-bordered">
-						<thead>
-							<tr>
-								<th>번호</th>
-								<th>법정동</th>
-								<th>아파트이름</th>
-								<th>지번</th>
-							</tr>
-						</thead>
-						<tbody id="gmap">
-						</tbody>
-					</table>
+			<hr>
+			<div class="form-select" id="default-select">
+				<div class="mt-2">
+					<div>
+						<p style="display: inline; font-size: 16px; font-family: 'Jua', sans-serif;">시도:<p>
+						<svg class="bi bi-arrow-right-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="bottom: 3em">
+		  					<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+		  					<path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
+		  					<path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+						</svg> 
+					</div>
+					
+					<select class="form-control btn-info" id="sido" style="height: 35px; display: inline;">
+						<option value="0" style="height: 30px">선택</option>
+					</select> 
 				</div>
-	<div id="map" style="width: 600px; height: 500px;" align="right"></div>
-
+				<div class="mt-2">
+					<div>
+						<p style="display: inline; font-size: 16px; font-family: 'Jua', sans-serif;">구군<p>
+						<svg class="bi bi-arrow-right-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="bottom: 3em">
+		  					<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+		  					<path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
+		  					<path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+						</svg>
+					</div>
+					
+					<select class="form-control btn-info" id="gugun" style="height: 35px">
+						<option value="0" style="height: 30px">선택</option>
+					</select>
+				</div>
+				<div class="mt-2">
+					<div>
+						<p style="display: inline; font-size: 16px; font-family: 'Jua', sans-serif;">읍면동<p>
+						<svg class="bi bi-arrow-right-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="bottom: 3em">
+		  					<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+		  					<path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
+		  					<path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+						</svg>
+					</div>
+					<select class="form-control btn-info" id="dong" style="height: 35px">
+						<option value="0" style="height: 30px">선택</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<div class="mb-5">
+		<div class="pl-3 pr-3" id="tablecover" style="width: 48%"%>
+		<table class="table table-info text-center">
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">법정동</th>
+					<th scope="col">아파트이름</th>
+					<th scope="col">지번</th>
+				</tr>
+			</thead>
+			<tbody id="gmap">
+			</tbody>
+		</table>
+	</div>
+	<div id="map" class="pl-3 pr-3 " style="width: 48%; height: 400px;" align="right"></div>
+	</div>
+	
+	<div>
+	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
+</div>
 </body>
 </html>

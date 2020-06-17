@@ -50,7 +50,7 @@
         </div>
 
         <div class="input-group mb-3 mt-4 float-right w-25">
-            <input type="text" class="form-control" placeholder="어떤것이 궁금하세요??" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control" v-model="dongName" placeholder="어떤것이 궁금하세요??" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
                 <b-button @click="searchContent" >검색</b-button>
             </div>
@@ -64,13 +64,10 @@
             :current-page="currentPage"
             :fields="fields"
             @row-clicked="rowClick"
+
+            
         ></b-table>
         <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage" align="center"></b-pagination>
-        <!--
-        <div class="text-right">
-          <b-button  @click="writeContent">글쓰기</b-button>
-        </div>
-        -->
     </div>
 </template>
 
@@ -131,11 +128,17 @@ export default {
         path: `/board/${item.content_id}`
       });
     },
+    searchContent(){
+
+    }
   },
   computed: {
     rows() {
       return this.items.length;
     }
+  },
+  mounted: {
+
   }
 }
 </script>
