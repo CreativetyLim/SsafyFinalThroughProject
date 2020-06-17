@@ -1,332 +1,564 @@
+// buildYear,dealYear,dealMonth,dealDay,dong,dealAmount,AptName,area,code,floor,jibun
 export default {
-    User: [
+  Dong: [
       {
-        user_id: 1,
-        name: "ssafy",
-        created_at: "2018-09-11"
+          dong: "사직동"
       },
       {
-        user_id: 2,
-        name: "ssafy2",
-        created_at: "2018-09-12"
+          dong: "내수동"
       },
       {
-        user_id: 3,
-        name: "ssafy3",
-        created_at: "2018-09-13"
+          dong: "견지동"
       },
       {
-        user_id: 4,
-        name: "ssafy4",
-        created_at: "2018-09-14"
+          dong: "효제동"
       },
       {
-        user_id: 5,
-        name: "ssafy5",
-        created_at: "2018-09-15"
+          dong: "명륜1가"
+      },
+      {
+          dong: "명륜2가"
+      },
+      {
+          dong: "명륜3가"
+      },
+      {
+          dong: "창신동"
+      },
+      {
+          dong: "숭인동"
+      },
+      {
+          dong: "평창동"
+      },
+      {
+          dong: "연건동"
+      },
+      {
+          dong: "익선동"
       }
-    ],
-    Content: [
+
+  ],
+  Apartment: [
       {
-        content_id: 1,
-        user_id: 1,
-        title: "게시판 제목 1",
-        context: "게시판 내용1",
-        created_at: "2018-09-11",
-        updated_at: null
+          buildYear: 2008,
+          dealYear: 2019,
+          dealMonth: 1,
+          dealDay: 11,
+          dong: "사직동",
+          dealAmount: "162,000",
+          aptName: "광화문풍림스페이스본(106동)",
+          "area": "163.33",
+          code: "163.33",
+          floor: "11110",
+          jibun: "11"
       },
       {
-        content_id: 2,
-        user_id: 3,
-        title: "게시판 제목 2",
-        context: "게시판 내용2",
-        created_at: "2018-09-12",
-        updated_at: null
+          buildYear: 2008,
+          dealYear: 2019,
+          dealMonth: 1,
+          dealDay: 19,
+          dong: "사직동",
+          dealAmount: "119,000",
+          aptName: "광화문풍림스페이스본(101동~105동)",
+          "area": "131.44",
+          code: "131.44",
+          floor: "11110",
+          jibun: "13"
       },
       {
-        content_id: 3,
-        user_id: 2,
-        title: "게시판 제목 3",
-        context: "게시판 내용3",
-        created_at: "2018-09-13",
-        updated_at: null
+          buildYear: 2008,
+          dealYear: 2019,
+          dealMonth: 1,
+          dealDay: 30,
+          dong: "사직동",
+          dealAmount: "119,000",
+          aptName: "광화문풍림스페이스본(101동~105동)",
+          "area": "147.31",
+          code: "147.31",
+          floor: "11110",
+          jibun: "1"
       },
       {
-        content_id: 4,
-        user_id: 4,
-        title: "게시판 제목 4",
-        context: "게시판 내용4",
-        created_at: "2018-09-14",
-        updated_at: null
+          buildYear: 2004,
+          dealYear: 2019,
+          dealMonth: 1,
+          dealDay: 25,
+          dong: "내수동",
+          dealAmount: "160,000",
+          aptName: "경희궁의아침4단지",
+          "area": "150.48",
+          code: "150.48",
+          floor: "11110",
+          jibun: "14"
       },
       {
-        content_id: 5,
-        user_id: 5,
-        title: "게시판 제목 5",
-        context: "게시판 내용5",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2008",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "10",
+        "dong": "견지동",
+        "dealAmount": "101,500",
+        "aptName": "대성스카이렉스",
+        "area": "149.8",
+        "code": "11110",
+        "floor": "9",
+        "jibun": "110\n"
       },
       {
-        content_id: 6,
-        user_id: 1,
-        title: "게시판 제목 6",
-        context: "게시판 내용6",
-        created_at: "2018-09-11",
-        updated_at: null
+        "buildYear": "2017",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "7",
+        "dong": "효제동",
+        "dealAmount": " 20,000",
+        "aptName": "포레스트힐시티",
+        "area": "16.672",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "65-2\n"
       },
       {
-        content_id: 7,
-        user_id: 3,
-        title: "게시판 제목 7",
-        context: "게시판 내용7",
-        created_at: "2018-09-12",
-        updated_at: null
+        "buildYear": "2017",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "10",
+        "dong": "효제동",
+        "dealAmount": " 23,000",
+        "aptName": "포레스트힐시티",
+        "area": "20.3861",
+        "code": "11110",
+        "floor": "12",
+        "jibun": "65-2"
       },
       {
-        content_id: 8,
-        user_id: 2,
-        title: "게시판 제목 8",
-        context: "게시판 내용8",
-        created_at: "2018-09-13",
-        updated_at: null
+        "buildYear": "2017",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "효제동",
+        "dealAmount": " 20,500",
+        "aptName": "포레스트힐시티",
+        "area": "16.672",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "65-2"
       },
       {
-        content_id: 9,
-        user_id: 4,
-        title: "게시판 제목 9",
-        context: "게시판 내용9",
-        created_at: "2018-09-14",
-        updated_at: null
+        "buildYear": "2003",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "14",
+        "dong": "명륜1가",
+        "dealAmount": " 38,300",
+        "aptName": "송림아마레스아파트",
+        "area": "53.42",
+        "code": "11110",
+        "floor": "6",
+        "jibun": "2-12"
       },
       {
-        content_id: 10,
-        user_id: 5,
-        title: "게시판 제목 10",
-        context: "게시판 내용10",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "1995",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "4",
+        "dong": "명륜2가",
+        "dealAmount": " 73,500",
+        "aptName": "아남1",
+        "area": "84.8",
+        "code": "11110",
+        "floor": "2",
+        "jibun": "4"
       },
       {
-        content_id: 11,
-        user_id: 1,
-        title: "게시판 제목 11",
-        context: "게시판 내용11",
-        created_at: "2018-09-11",
-        updated_at: null
+        "buildYear": "1995",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "6",
+        "dong": "명륜2가",
+        "dealAmount": " 85,000",
+        "aptName": "아남1",
+        "area": "84.9",
+        "code": "11110",
+        "floor": "17",
+        "jibun": "4"
       },
       {
-        content_id: 12,
-        user_id: 3,
-        title: "게시판 제목 12",
-        context: "게시판 내용12",
-        created_at: "2018-09-12",
-        updated_at: null
+        "buildYear": "1999",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "14",
+        "dong": "명륜2가",
+        "dealAmount": " 65,000",
+        "aptName": "아남3",
+        "area": "65.78",
+        "code": "11110",
+        "floor": "4",
+        "jibun": "237"
       },
       {
-        content_id: 13,
-        user_id: 2,
-        title: "게시판 제목 13",
-        context: "게시판 내용13",
-        created_at: "2018-09-13",
-        updated_at: null
+        "buildYear": "1999",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "14",
+        "dong": "명륜3가",
+        "dealAmount": " 35,000",
+        "aptName": "한빛",
+        "area": "59.73",
+        "code": "11110",
+        "floor": "3",
+        "jibun": "1-30"
       },
       {
-        content_id: 14,
-        user_id: 4,
-        title: "게시판 제목 14",
-        context: "게시판 내용14",
-        created_at: "2018-09-14",
-        updated_at: null
+        "buildYear": "1966",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "16",
+        "dong": "창신동",
+        "dealAmount": " 29,000",
+        "aptName": "동대문",
+        "area": "28.8",
+        "code": "11110",
+        "floor": "3",
+        "jibun": "328-17"
       },
       {
-        content_id: 15,
-        user_id: 5,
-        title: "게시판 제목 15",
-        context: "게시판 내용15",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2012",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "8",
+        "dong": "숭인동",
+        "dealAmount": " 13,000",
+        "aptName": "삼전솔하임2차",
+        "area": "14.69",
+        "code": "11110",
+        "floor": "9",
+        "jibun": "296-19"
       },
       {
-        content_id: 16,
-        user_id: 1,
-        title: "게시판 제목 16",
-        context: "게시판 내용16",
-        created_at: "2018-09-11",
-        updated_at: null
+        "buildYear": "2012",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "9",
+        "dong": "숭인동",
+        "dealAmount": " 13,500",
+        "aptName": "삼전솔하임2차",
+        "area": "16.67",
+        "code": "11110",
+        "floor": "5",
+        "jibun": "296-19"
       },
       {
-        content_id: 17,
-        user_id: 3,
-        title: "게시판 제목 17",
-        context: "게시판 내용17",
-        created_at: "2018-09-12",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "주건축물제1동",
+        "area": "15.76",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 18,
-        user_id: 2,
-        title: "게시판 제목 18",
-        context: "게시판 내용18",
-        created_at: "2018-09-13",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "주건축물제1동",
+        "area": "15.76",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 19,
-        user_id: 4,
-        title: "게시판 제목 19",
-        context: "게시판 내용19",
-        created_at: "2018-09-14",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,000",
+        "aptName": "주건축물제1동",
+        "area": "14.48",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 20,
-        user_id: 5,
-        title: "게시판 제목 20",
-        context: "게시판 내용20",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "주건축물제1동",
+        "area": "15.76",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 21,
-        user_id: 1,
-        title: "게시판 제목 21",
-        context: "게시판 내용21",
-        created_at: "2018-09-11",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "주건축물제1동",
+        "area": "15.76",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 22,
-        user_id: 3,
-        title: "게시판 제목 22",
-        context: "게시판 내용22",
-        created_at: "2018-09-12",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "주건축물제1동",
+        "area": "15.76",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 23,
-        user_id: 2,
-        title: "게시판 제목 23",
-        context: "게시판 내용23",
-        created_at: "2018-09-13",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,000",
+        "aptName": "주건축물제1동",
+        "area": "15.42",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 24,
-        user_id: 4,
-        title: "게시판 제목 24",
-        context: "게시판 내용24",
-        created_at: "2018-09-14",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "주건축물제1동",
+        "area": "15.76",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 25,
-        user_id: 5,
-        title: "게시판 제목 25",
-        context: "게시판 내용25",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,000",
+        "aptName": "주건축물제1동",
+        "area": "15.42",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 26,
-        user_id: 1,
-        title: "게시판 제목 26",
-        context: "게시판 내용26",
-        created_at: "2018-09-11",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "15",
+        "dong": "숭인동",
+        "dealAmount": " 11,000",
+        "aptName": "주건축물제1동",
+        "area": "14.48",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "1392"
       },
       {
-        content_id: 27,
-        user_id: 3,
-        title: "게시판 제목 27",
-        context: "게시판 내용27",
-        created_at: "2018-09-12",
-        updated_at: null
+        "buildYear": "2012",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "17",
+        "dong": "숭인동",
+        "dealAmount": " 12,500",
+        "aptName": "삼전솔하임2차",
+        "area": "14.69",
+        "code": "11110",
+        "floor": "5",
+        "ji,bun": "296-19\n"
       },
       {
-        content_id: 28,
-        user_id: 2,
-        title: "게시판 제목 28",
-        context: "게시판 내용28",
-        created_at: "2018-09-13",
-        updated_at: null
+        "buildYear": "2014",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "18",
+        "dong": "숭인동",
+        "dealAmount": " 11,300",
+        "aptName": "숭인한양LEEPS",
+        "area": "12.78",
+        "code": "11110",
+        "floor": "4",
+        "jibun": "1421-2"
       },
       {
-        content_id: 29,
-        user_id: 4,
-        title: "게시판 제목 29",
-        context: "게시판 내용29",
-        created_at: "2018-09-14",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "29",
+        "dong": "숭인동",
+        "dealAmount": " 12,000",
+        "aptName": "종로동광모닝스카이",
+        "area": "15.855",
+        "code": "11110",
+        "floor": "13",
+        "jibun": "1421-1"
       },
       {
-        content_id: 30,
-        user_id: 5,
-        title: "게시판 제목 30",
-        context: "게시판 내용30",
-        created_at: "2018-09-15",
-        updated_at: null
-      }
-    ],
-    Comment: [
-      {
-        comment_id: 1,
-        content_id: 2,
-        user_id: 1,
-        context: "안녕하세요1",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2013",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "30",
+        "dong": "숭인동",
+        "dealAmount": " 12,200",
+        "aptName": "종로동광모닝스카이",
+        "area": "15.855",
+        "code": "11110",
+        "floor": "14",
+        "jibun": "1421-1"
       },
       {
-        comment_id: 2,
-        content_id: 1,
-        user_id: 1,
-        context: "안녕하세요2",
-        created_at: "2018-09-12",
-        updated_at: null
+        "buildYear": "2004",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "16",
+        "dong": "평창동",
+        "dealAmount": " 85,000",
+        "aptName": "에지앙빌",
+        "area": "110.61",
+        "code": "11110",
+        "floor": "2",
+        "jibun": "179-5"
       },
       {
-        comment_id: 3,
-        content_id: 3,
-        user_id: 3,
-        context: "안녕하세요3",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2001",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "23",
+        "dong": "평창동",
+        "dealAmount": " 57,500",
+        "aptName": "롯데낙천대",
+        "area": "84.21",
+        "code": "11110",
+        "floor": "5",
+        "jibun": "72"
       },
       {
-        comment_id: 4,
-        content_id: 3,
-        user_id: 1,
-        context: "안녕하세요4",
-        created_at: "2018-09-19",
-        updated_at: null
+        "buildYear": "1998",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "26",
+        "dong": "평창동",
+        "dealAmount": " 35,500",
+        "aptName": "삼성",
+        "area": "59.97",
+        "code": "11110",
+        "floor": "11",
+        "jibun": "596"
       },
       {
-        comment_id: 5,
-        content_id: 3,
-        user_id: 2,
-        context: "안녕하세요6",
-        created_at: "2018-09-20",
-        updated_at: null
-      }
-    ],
-    SubComment: [
-      {
-        subcomment_id: 1,
-        comment_id: 3,
-        user_id: 3,
-        context: "서브 댓글 1",
-        created_at: "2018-09-15",
-        updated_at: null
+        "buildYear": "2004",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "26",
+        "dong": "평창동",
+        "dealAmount": " 99,000",
+        "aptName": "벽산블루밍평창힐스",
+        "area": "150.94",
+        "code": "11110",
+        "floor": "3",
+        "jibun": "45"
       },
       {
-        subcomment_id: 2,
-        comment_id: 3,
-        user_id: 1,
-        context: "서브 댓글 2",
-        created_at: "2018-09-16",
-        updated_at: null
-      }
-    ]
-  };
-  
+        "buildYear": "1998",
+        "dealYear": "2019",
+        "dealMonth": "1",
+        "dealDay": "28",
+        "dong": "평창동",
+        "dealAmount": " 38,500",
+        "aptName": "삼성",
+        "area": "59.97",
+        "code": "11110",
+        "floor": "8",
+        "jibun": "596"
+      },
+      {
+        "buildYear": "2003",
+        "dealYear": "2019",
+        "dealMonth": "2",
+        "dealDay": "27",
+        "dong": "익선동",
+        "dealAmount": " 29,300",
+        "aptName": "현대뜨레비앙",
+        "area": "43.98",
+        "code": "11110",
+        "floor": "7",
+        "jibun": "55"
+      },
+      {
+        "buildYear": "2014",
+        "dealYear": "2019",
+        "dealMonth": "2",
+        "dealDay": "1",
+        "dong": "연건동",
+        "dealAmount": " 19,400",
+        "aptName": "이화에수풀",
+        "area": "16.98",
+        "code": "11110",
+        "floor": "4",
+        "jibun": "195-10"
+      },
+      {
+        "buildYear": "2014",
+        "dealYear": "2019",
+        "dealMonth": "2",
+        "dealDay": "28",
+        "dong": "연건동",
+        "dealAmount": " 19,300",
+        "aptName": "이화에수풀",
+        "area": "16.98",
+        "code": "11110",
+        "floor": "10",
+        "jibun": "195-10"
+      },
+      {
+        "buildYear": "2002",
+        "dealYear": "2019",
+        "dealMonth": "2",
+        "dealDay": "16",
+        "dong": "명륜1가",
+        "dealAmount": " 59,500",
+        "aptName": "아마레스",
+        "area": "84.59",
+        "code": "11110",
+        "floor": "4",
+        "jibun": "45-5"
+      },
+      {
+        "buildYear": "1995",
+        "dealYear": "2019",
+        "dealMonth": "2",
+        "dealDay": "28",
+        "dong": "명륜2가",
+        "dealAmount": " 74,800",
+        "aptName": "아남1",
+        "area": "84.9",
+        "code": "11110",
+        "floor": "2",
+        "jibun": "4"
+      },
+  ]
+}

@@ -3,7 +3,7 @@
         <button @click="testBtn">클릭</button>
         <table class="table table-dark">
             <thead>
-                <tr>
+                <tr class="text-center">
                     <td scope="col">글번호</td>
                     <td scope="col">글제목</td>
                     <td scope="col">작성자</td>
@@ -11,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="data in qnaDatas" v-bind:key="data.qnaNo">
+                <tr v-for="data in qnaDatas" v-bind:key="data.qnaNo" class="text-center">
                     <td scope="row">{{data.qnaNo}}</td>
                     <td>{{data.qnaTitle}}</td>
                     <td>{{data.qnaUserid}}</td>
@@ -19,7 +19,11 @@
                 </tr>
             </tbody>
         </table>
+        <div class="text-right">
+            <b-button  @click="writeContent">글쓰기</b-button>
+        </div>
     </div>
+    
 </template>
 
 <script>
@@ -39,7 +43,12 @@ export default {
             }).catch(e => {
                 console.error(e)
             })
-        }
-    }
+        },
+        writeContent() {
+          this.$router.push({
+            path: `/BoardCreate`
+          });
+        },
+    }   
 }
 </script>

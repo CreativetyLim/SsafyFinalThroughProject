@@ -1,5 +1,5 @@
 <template>
-    <v-row align="center" class="fill-height" justify="center">
+    <v-row align="center" class="fill-height mt-5" justify="center">
         <div class="register elevation-14 w-50">
             <h3 class="mt-3 font-weight-bold text-center py-3 black--text">
                 로 그 인
