@@ -77,6 +77,11 @@ export default {
             ]
         }
     },
+    computed: {
+        lodingState: function() {
+            return this.$store.state.common.lodingState;
+        }
+    },
     // computed: {
     //     idRules() {
     //         return this.$store.state.common.idRules;
