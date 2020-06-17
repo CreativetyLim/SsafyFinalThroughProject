@@ -5,4 +5,8 @@
 	<insert id="regist">
 		insert into cctv(roadName, lat, lon) values(#{roadName},#{lat},#{lon})
 	</insert>
+	
+	<select id="list" resultType="com.ssafy.happyhouse.dto.cctv">
+		select * from cctv
+	</select>
 </mapper>

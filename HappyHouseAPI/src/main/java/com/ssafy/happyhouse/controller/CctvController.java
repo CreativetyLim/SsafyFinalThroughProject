@@ -8,6 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,11 +29,10 @@ public class CctvController {
 	/////////////////////////////////// 처음 시작할때 json file 파싱 해서 cctv 위치 db에 등록하기 /////////////////
 	@PostMapping("regist")
 	public void regist() {
-		String file= "cctvdata.json";
-		file="";
+		String file= "/src/main/resources/static/json/cctvdata.json";
 		try {
 			JSONParser parser = new JSONParser();
-			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(file));
+			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader( ResourceUtils.getFile("classpath:cctvdata.json")));
 			
 			JSONArray fields = (JSONArray) jsonObject.get("fields"); 
 			JSONArray records = (JSONArray) jsonObject.get("records");

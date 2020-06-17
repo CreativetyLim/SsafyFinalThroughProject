@@ -9,6 +9,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ResourceUtils;
 
 import com.ssafy.happyhouse.dao.CctvDAO;
 import com.ssafy.happyhouse.dto.cctv;
@@ -18,7 +19,7 @@ public class CctvServiceImpl implements CctvService{
 
 	@Autowired
 	CctvDAO dao;
-	String file = "";
+	
 	
 	@Override
 	public void regist(List<cctv> list) {
@@ -30,11 +31,11 @@ public class CctvServiceImpl implements CctvService{
 
 	@Override
 	public List<cctv> list() {
-		file= "cctvdata.json";
+		
 		List<cctv> list= new LinkedList<>();
 		try {
 			JSONParser parser = new JSONParser();
-			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(file));
+			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader( ResourceUtils.getFile("classpath:cctvdata.json")));
 			
 			JSONArray fields = (JSONArray) jsonObject.get("fields"); 
 			JSONArray records = (JSONArray) jsonObject.get("records");
@@ -65,12 +66,10 @@ public class CctvServiceImpl implements CctvService{
 	@Override
 	public List<cctv> search(String name) {
 		// TODO Auto-generated method stub
-		file= "cctvdata.json";
-		file="";
 		List<cctv> list= new LinkedList<>();
 		try {
 			JSONParser parser = new JSONParser();
-			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(file));
+			JSONObject jsonObject = (JSONObject) parser.parse(new FileReader( ResourceUtils.getFile("classpath:cctvdata.json")));
 			
 			JSONArray fields = (JSONArray) jsonObject.get("fields"); 
 			JSONArray records = (JSONArray) jsonObject.get("records");
