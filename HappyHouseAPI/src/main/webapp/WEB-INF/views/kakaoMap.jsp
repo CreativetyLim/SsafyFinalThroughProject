@@ -57,6 +57,58 @@
 	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 	crossorigin="anonymous"></script>
 <script>
+	var map;
+	function functionDirection(){
+		// 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+			var linePath = [
+			     new kakao.maps.LatLng(37.529743, 127.005936),
+			    new kakao.maps.LatLng(37.529839, 127.006844),
+			    new kakao.maps.LatLng(37.52953, 127.006866), 
+			    new kakao.maps.LatLng(37.529293, 127.006859), 
+			     new kakao.maps.LatLng(37.528938, 127.00753),
+			    new kakao.maps.LatLng(37.529682, 127.009346),
+			    new kakao.maps.LatLng(37.530083, 127.009857),
+			    new kakao.maps.LatLng(37.530712, 127.010933),
+			    new kakao.maps.LatLng(37.530586, 127.010536),
+			   new kakao.maps.LatLng(37.531063, 127.010063), 
+			   new kakao.maps.LatLng(37.530907, 127.009636),
+			    new kakao.maps.LatLng(37.529293, 127.006859),
+			    new kakao.maps.LatLng(37.523205, 127.016747),
+			    new kakao.maps.LatLng(37.522045, 127.017799),
+			    new kakao.maps.LatLng(37.521366, 127.018242),
+			    new kakao.maps.LatLng(37.520103, 127.018654), 
+			    new kakao.maps.LatLng(37.520187, 127.019234),
+			    new kakao.maps.LatLng(37.51651, 127.0205),
+			    new kakao.maps.LatLng(37.516579, 127.02066),
+			    new kakao.maps.LatLng(37.515648,127.021271),
+			    new kakao.maps.LatLng(37.515747, 127.022331),
+			    new kakao.maps.LatLng(37.515224, 127.022575),
+			    new kakao.maps.LatLng(37.515556, 127.023651),
+			    new kakao.maps.LatLng(37.512333, 127.025154),
+			    new kakao.maps.LatLng(37.511345, 127.025635),
+			    new kakao.maps.LatLng(37.509876, 127.027939),
+			    new kakao.maps.LatLng(37.508018, 127.030785),
+			    new kakao.maps.LatLng(37.508423, 127.033371),
+			    new kakao.maps.LatLng(37.500904, 127.036911),
+			    new kakao.maps.LatLng(37.501099, 127.037567)
+			];
+		
+			/* "coordinates":[127.025635,37.511345],[127.027939,37.509876],[127.030785,37.508018],[127.033371,37.508423],[127.036911,37.500904],
+			[127.037567,37.501099]] */
+		
+			// 지도에 표시할 선을 생성합니다
+			var polyline = new kakao.maps.Polyline({
+			    path: linePath, // 선을 구성하는 좌표배열 입니다
+			    strokeWeight: 5, // 선의 두께 입니다
+			    strokeColor: '#FFAE00', // 선의 색깔입니다
+			    strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+			    strokeStyle: 'solid' // 선의 스타일입니다
+			});
+	
+			// 지도에 선을 표시합니다 
+			polyline.setMap(map); 
+		}
+
 	$(document).ready(function(){
 			//// 지도 생성 파트 ///
 			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -65,7 +117,8 @@
 		        level: 6 // 지도의 확대 레벨
 		    };  
 		
-			var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+			
 			
 			/// 비동기 요청 //
 			$.get("${pageContext.request.contextPath}/cctv/list"
@@ -85,6 +138,61 @@
 						
 						circle.setMap(map);
 					});//each
+					
+					//////////////////////////////////////ajax 넣기 경로 그리기 ////////////////////////////////////
+					//테스트하고지우기
+					
+					var linePath = [
+			     new kakao.maps.LatLng(37.529743, 127.005936),
+			    new kakao.maps.LatLng(37.529839, 127.006844),
+			    new kakao.maps.LatLng(37.52953, 127.006866), 
+			    new kakao.maps.LatLng(37.529293, 127.006859), 
+			     new kakao.maps.LatLng(37.528938, 127.00753),
+			    new kakao.maps.LatLng(37.529682, 127.009346),
+			    new kakao.maps.LatLng(37.530083, 127.009857),
+			    new kakao.maps.LatLng(37.530712, 127.010933),
+			    new kakao.maps.LatLng(37.530586, 127.010536),
+			    new kakao.maps.LatLng(37.529293, 127.006859),
+			  // new kakao.maps.LatLng(37.531063, 127.010063), 
+			   new kakao.maps.LatLng(37.530907, 127.009636),
+			  //  new kakao.maps.LatLng(37.523205, 127.016747),
+			    new kakao.maps.LatLng(37.522045, 127.017799),
+			    new kakao.maps.LatLng(37.521366, 127.018242),
+			    new kakao.maps.LatLng(37.520103, 127.018654), 
+			    new kakao.maps.LatLng(37.520187, 127.019234),
+			    new kakao.maps.LatLng(37.51651, 127.0205),
+			    new kakao.maps.LatLng(37.516579, 127.02066),
+			    new kakao.maps.LatLng(37.515648,127.021271),
+			    new kakao.maps.LatLng(37.515747, 127.022331),
+			    new kakao.maps.LatLng(37.515224, 127.022575),
+			    new kakao.maps.LatLng(37.515556, 127.023651),
+			    new kakao.maps.LatLng(37.512333, 127.025154),
+			    new kakao.maps.LatLng(37.511345, 127.025635),
+			    new kakao.maps.LatLng(37.509876, 127.027939),
+			    new kakao.maps.LatLng(37.508018, 127.030785),
+			    new kakao.maps.LatLng(37.508423, 127.033371),
+			    new kakao.maps.LatLng(37.500904, 127.036911),
+			    new kakao.maps.LatLng(37.501099, 127.037567)
+			];
+		
+			/* "coordinates":[127.025635,37.511345],[127.027939,37.509876],[127.030785,37.508018],[127.033371,37.508423],[127.036911,37.500904],
+			[127.037567,37.501099]] */
+		
+			// 지도에 표시할 선을 생성합니다
+			var polyline = new kakao.maps.Polyline({
+			    path: linePath, // 선을 구성하는 좌표배열 입니다
+			    strokeWeight: 5, // 선의 두께 입니다
+			    strokeColor: '#FFAE00', // 선의 색깔입니다
+			    strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+			    strokeStyle: 'solid' // 선의 스타일입니다
+			});
+	
+			// 지도에 선을 표시합니다 
+			polyline.setMap(map); 
+					
+					//
+					
+					
 ////////////////////////////////지도 + 원그리기 완료  아래 코드는 마커 표시 //////////////////////////////
 					
 					let colorArr = ['table-primary', 'table-success', 'table-danger']; 
@@ -162,8 +270,10 @@
 				                                    	        });
 
 				                                    	        // 인포윈도우로 장소에 대한 설명을 표시합니다
-				                                    	        var iwContent = vo.no+vo.dong+vo.aptName+vo.jibun, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-																    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+				                                    	        var iwContent = '<div style="padding:5px;">'+vo.no+vo.dong+vo.aptName+vo.jibun+'<br><a href="javascript:functionDirection();" style="color:blue">직장/학교</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+				                                    	        iwRemoveable = true;
+				                                    	        // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+																    // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 																
 																// 인포윈도우를 생성합니다
 																var infowindow = new kakao.maps.InfoWindow({

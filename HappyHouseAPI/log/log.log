@@ -118,3 +118,276 @@ Identify and stop the process that's listening on port 9999 or configure this ap
 [2m2020-06-17 14:53:37.267[0;39m [32m INFO[0;39m [35m11468[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
 [2m2020-06-17 14:53:37.389[0;39m [32m INFO[0;39m [35m11468[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
 [2m2020-06-17 14:53:37.491[0;39m [32m INFO[0;39m [35m11468[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2020-06-17 16:58:56.711[0;39m [32m INFO[0;39m [35m11468[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2020-06-17 16:58:57.479[0;39m [32m INFO[0;39m [35m11468[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 17:43:01.350[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-06-17 17:43:01.353[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2m2020-06-17 17:43:03.134[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4e0c92db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 17:43:03.194[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 17:43:03.518[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 17:43:03.959[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 2605 ms
+[2m2020-06-17 17:43:04.888[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 17:43:04.916[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 17:43:05.168[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 17:43:26.124[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-06-17 17:43:26.138[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 13 ms
+[2m2020-06-17 17:43:27.528[0;39m [33m WARN[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.a.c.util.SessionIdGeneratorBase       [0;39m [2m:[0;39m Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [599] milliseconds.
+[2m2020-06-17 17:43:31.054[0;39m [31mERROR[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Access denied for user 'ssafy'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy74.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy75.selectSido(Unknown Source)
+	at com.ssafy.happyhouse.service.FSelectBoxServiceImpl.selectSido(FSelectBoxServiceImpl.java:23)
+	at com.ssafy.happyhouse.controller.FSelectBoxController.sido(FSelectBoxController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[2m2020-06-17 17:43:31.069[0;39m [31mERROR[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/happyhouse] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'ssafy'@'localhost' (using password: YES)
+### The error may exist in file [C:\Users\t\git\finalproject\SsafyFinalThroughProject\HappyHouseAPI\target\classes\mappers\mapMapper.xml]
+### The error may involve com.ssafy.happyhouse.dao.FSelectBoxDAO.selectSido
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'ssafy'@'localhost' (using password: YES)] with root cause
+
+java.sql.SQLException: Access denied for user 'ssafy'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy74.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy75.selectSido(Unknown Source)
+	at com.ssafy.happyhouse.service.FSelectBoxServiceImpl.selectSido(FSelectBoxServiceImpl.java:23)
+	at com.ssafy.happyhouse.controller.FSelectBoxController.sido(FSelectBoxController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[2m2020-06-17 17:43:55.432[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[     Thread-161][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 17:43:56.185[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4e0c92db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 17:43:56.188[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 17:43:56.242[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 17:43:56.375[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 833 ms
+[2m2020-06-17 17:43:56.631[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 17:43:56.637[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 17:43:56.761[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 17:43:56.959[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2020-06-17 17:43:57.128[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-06-17 17:43:57.131[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2020-06-17 18:40:08.406[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[     Thread-165][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 18:40:09.278[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4e0c92db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 18:40:09.282[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 18:40:09.350[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 18:40:09.475[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 841 ms
+[2m2020-06-17 18:40:09.765[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 18:40:09.770[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 18:40:09.853[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 18:40:09.945[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2020-06-17 18:40:13.950[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[     Thread-327][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 18:40:14.641[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4e0c92db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 18:40:14.643[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 18:40:14.692[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 18:40:14.787[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 736 ms
+[2m2020-06-17 18:40:15.072[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 18:40:15.076[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 18:40:15.197[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 18:40:15.301[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2020-06-17 18:44:22.010[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-06-17 18:44:22.023[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 12 ms
+[2m2020-06-17 20:15:32.953[0;39m [33m WARN[0;39m [35m10976[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /happyhouse/test/naver.com
+[2m2020-06-17 20:24:48.631[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[     Thread-489][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 20:24:49.744[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4e0c92db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 20:24:49.746[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 20:24:49.813[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 20:24:49.929[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1129 ms
+[2m2020-06-17 20:24:50.238[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 20:24:50.243[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 20:24:50.334[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 20:24:50.414[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2020-06-17 20:25:04.673[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[     Thread-651][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 20:25:05.240[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4e0c92db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 20:25:05.241[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 20:25:05.288[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 20:25:05.388[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 607 ms
+[2m2020-06-17 20:25:05.623[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 20:25:05.626[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 20:25:05.710[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 20:25:05.788[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2020-06-17 20:25:06.848[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2020-06-17 20:25:07.457[0;39m [32m INFO[0;39m [35m10976[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 20:47:25.984[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-06-17 20:47:25.987[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2m2020-06-17 20:47:27.486[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d61fabfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-06-17 20:47:27.543[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.w.s.a.s.AnnotationActionEndpointMapping[0;39m [2m:[0;39m Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[2m2020-06-17 20:47:27.974[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2020-06-17 20:47:28.294[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 2306 ms
+[2m2020-06-17 20:47:29.164[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-06-17 20:47:29.190[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-06-17 20:47:29.421[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/happyhouse'
+[2m2020-06-17 20:47:33.878[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-06-17 20:47:33.892[0;39m [32m INFO[0;39m [35m31832[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 13 ms
+[2m2020-06-17 20:47:35.352[0;39m [33m WARN[0;39m [35m31832[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.a.c.util.SessionIdGeneratorBase       [0;39m [2m:[0;39m Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [617] milliseconds.

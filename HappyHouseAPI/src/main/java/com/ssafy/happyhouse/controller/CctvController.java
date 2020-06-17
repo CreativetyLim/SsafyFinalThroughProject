@@ -1,9 +1,15 @@
 package com.ssafy.happyhouse.controller;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.jasper.tagplugins.jstl.core.Url;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -67,9 +73,29 @@ public class CctvController {
 	
 	@GetMapping("/search")
 	public List<cctv> search(String name) {
-		
-		
-		
 		return ser.search(name);
 	}
+	
+	/*@GetMapping("/direction")
+	public List<cctv> direction(String name) {
+		
+		String urlstr = "";
+		URL url;
+		try {
+			url = new URL(urlstr);
+			HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+			urlConnection.setRequestMethod("GET");
+			BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(),"utf-8"));
+			
+			 JSONObject json = new JSONObject();
+		        json.put("data", br);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return ser.search(name);
+	}*/
+	
 }
