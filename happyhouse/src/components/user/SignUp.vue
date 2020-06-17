@@ -6,22 +6,22 @@
                     회 원 가 입
                 </h3>
                 <v-form class="pa-5 text-center" ref="form">
-                    <v-text-field :rules="nameRules" cla
+                    <v-text-field cla
                     ss="pl-3 pr-3" label="Name" prepend-icon="mdi-account"
                                 required type="text" v-model="User.uName">
                             </v-text-field>
-                    <div class="alert-danger" v-if="submitted && errors.has('uName')">
-                        {{errors.first('uName')}}
+                    <div class="alert-danger" v-if="submitted && errors.has('User.uName')">
+                        {{errors.first('User.uName')}}
                     </div>
-                    <v-text-field :rules="idRules" cla
+                    <v-text-field cla
                     ss="pl-3 pr-3" label="Id" prepend-icon="mdi-lock"
                                 required type="text" v-model="User.uId">
                             </v-text-field>
-                    <v-text-field :rules="pwRules" cla
+                    <v-text-field cla
                     ss="pl-3 pr-3" label="Password" prepend-icon="mdi-lock"
                                 required type="password" v-model="User.uPw">
                             </v-text-field>
-                    <v-text-field :rules="validatePasswordRules" cla
+                    <v-text-field cla
                     ss="pl-3 pr-3" label="Confirm Password" prepend-icon="mdi-lock"
                                 required type="password" v-model="validatePassword">
                             </v-text-field>
@@ -31,11 +31,11 @@
                         <v-radio label="남성" value="M" class="text-center"></v-radio>
                         <v-radio label="여성" value="F" class="text-center"></v-radio>
                     </v-radio-group>
-                    <v-text-field :rules="telRules" cla
+                    <v-text-field cla
                     ss="pl-3 pr-3" label="Tel" prepend-icon="mdi-phone"
                                 required type="text" v-model="uTel" placeholder="01012341234" @keyup.enter="userRegister">
                             </v-text-field>
-                    <v-btn :loading="loadingState" @click="userRegister" class="mt-3" color="indigo" outlined>
+                    <v-btn @click="userRegister" class="mt-3" color="indigo" outlined>
                                 REGISTER
                             </v-btn>
                 </v-form>
@@ -77,20 +77,11 @@ export default {
             ]
         }
     },
-    // computed: {
-    //     idRules() {
-    //         return this.$store.state.common.idRules;
-    //     },
-    // pwRules() {
-    //     return this.$store.state.common.passwordRules;
-    // },
-    // nameRules() {
-    //     return this.$store.state.common.nameRules;
-    // },
-    // loadingState() {
-    //     return this.$store.state.common.loadingState;
-    // },
-    // },
+    computed: {
+        lodingState: function() {
+            return this.$store.state.common.lodingState;
+        }
+    },
     components: {
         Modal,
     },

@@ -20,29 +20,29 @@
 </template>
 
 <script>
-    export default {
-        name: "Modal",
-        computed: {
-            modal() {
-                return this.$store.state.common.modal;
-            }
-        },
-        methods: {
-            modalOption() {
-                if (this.modal.option1 === '닫기') {
-                    this.$store.commit('CLOSE_MODAL');
-                } else {
-                    this.$emit('pass');
-                }
-            },
-            submit() {
+export default {
+    name: "Modal",
+    computed: {
+        modal() {
+            return this.$store.state.common.modal;
+        }
+    },
+    methods: {
+        modalOption() {
+            if (this.modal.option1 === '닫기') {
+                this.$store.commit('CLOSE_MODAL');
+            } else {
                 this.$emit('pass');
             }
         },
-        destroyed() {
-            this.$store.commit('CLOSE_MODAL');
+        submit() {
+            this.$emit('pass');
         }
+    },
+    destroyed() {
+        this.$store.commit('CLOSE_MODAL');
     }
+}
 </script>
 
 <style scoped>

@@ -1,16 +1,16 @@
 import axios from "axios";
-import user from "../store/user";
 
 const config = {
     baseUrl: 'http://localhost:9999/happyhouse/api/user'
 }
 function requestJoinMember(User) {
-    User.uId = User.uId;
-    User.uPw = User.uPw;
-    User.uName = User.uName;
-    User.uTel = User.uTel;
-    User.uAddr = User.uAddr;
-    User.uGender = User.uGender;
+    // User.uId = User.uId;
+    // User.uPw = User.uPw;
+    // User.uName = User.uName;
+    // User.uTel = User.uTel;
+    // User.uAddr = User.uAddr;
+    // User.uGender = User.uGender;
+    console.dir(User);
 
     return axios.post(`${config.baseUrl}/register`, User);
 }
@@ -34,7 +34,7 @@ function requestLogin(User) {
 }
 
 function queryMember() {
-    return axios.get(`${config.baseUrl}/api/members`);
+    return axios.get(`${config.baseUrl}/api/users`);
 }
 
 export {

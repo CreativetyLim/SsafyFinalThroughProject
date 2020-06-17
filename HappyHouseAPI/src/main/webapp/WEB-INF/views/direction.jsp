@@ -10,12 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Main</title>
 
-<!-- CSS here -->
-      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/magnific-popup.css">
-      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/slick.css">
-      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/style.css">
-      <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/assets/css/responsive.css">
+
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
@@ -99,7 +94,6 @@
                                 , function (data, status) {
                                    $("#gmap").empty();
                                     $("#searchResult").empty();
-                                    initMap();
                                     $.each(data, function (index, vo) {
                                         let str = "<tr style=\"cursor:pointer;\" class=" + colorArr[index % 3] + " onClick=\"location.href='${root }/apt.do/dongjibun&dong= " +vo.dong+"&jibun="+vo.jibun + "&aptname=" + vo.aptName +" '\" "+">"
                                             + "<td>"+ vo.no + "</td>"
@@ -108,7 +102,6 @@
                                             + "<td>" + vo.jibun + "</td></tr>"
                                         $("#gmap").append(str);
                                         $("#searchResult").append(vo.dong + " " + vo.aptName + " " + vo.jibun + "<br>");
-                                        addMarker(vo.lat, vo.lng, vo.aptName);
                                     });//each
 //                                    geocode(data);
                                 }//function
@@ -172,78 +165,13 @@
 
                <!-- here end -->
 
-
-               <!-- map start -->
-               <div id="map"
-                  style="width: 500px; height: 500px; display: inline-block; vertical-align: middle; margin: 10% 5% 5% 5%;"></div>
-               <script
-                  src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-               <script async defer
-                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4T_jNYPKmnznjXlTrrl96eAZ3Hw-AZqI&callback=initMap"></script>
-               <script>
-                  var multi = {
-                     lat : 37.5665734,
-                     lng : 126.978179
-                  };
-                  var map;
-
-                  function initMap() {
-                     map = new google.maps.Map(document
-                           .getElementById('map'), {
-                        center : multi,
-                        zoom : 12
-                     });
-
-                  }
-
-                  function addMarker(tmpLat, tmpLng, aptName) {
-                     var marker = new google.maps.Marker(
-                           {
-                              position : new google.maps.LatLng(
-                                    parseFloat(tmpLat),
-                                    parseFloat(tmpLng)),
-                           });
-                     marker.addListener('click', function() {
-                        map.setZoom(17);
-                        map.setCenter(marker.getPosition());
-                     });
-                     marker.setMap(map);
-
-                     var iwContent = '<div>' + aptName + '</div>';
-                     var infowindow = new google.maps.InfoWindow({
-                        content : iwContent
-                     });
-
-                     google.maps.event.addListener(marker, 'mouseover',
-                           function() {
-                              infowindow.open(map, marker);
-                           });
-                     google.maps.event.addListener(marker, 'mouseout',
-                           function() {
-                              infowindow.close();
-                           });
-                  }
-               </script>
-               <!-- map end -->
+vo.no, vo.dong , vo.aptName, vo.jibun
+              
             </div>
          </div>
       </div>
    </section>
    <!-- section end -->
    
-<!-- JS here -->
-      <script src="<c:url value="/assets/js/slick.min.js"/>"></script>
-      <script src="<c:url value="/assets/js/jquery.magnific-popup.js"/>"></script>
-      
-<<<<<<< HEAD
-      
-      <!-- Jquery Plugins, main Jquery -->   
-        <script src="<c:url value="/assets/js/plugins.js"/>"></script>
-        <script src="<c:url value="/assets/js/main.js"/>"></script>
-
-
-        
-=======
->>>>>>> branch 'master' of https://github.com/CreativetyLim/SsafyFinalThroughProject.git
 </body>
 </html>
