@@ -5,7 +5,7 @@
 	<!-- 회원정보 등록 -->
 	<insert id="register">
 	insert into User(uId, uPw, uName, uGender, uTel, uAddr) 
-	values (#{uId}, #{uPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
+		values (#{uId}, #{uPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
 	</insert>
 	
 	<!-- 회원정보 수정 -->

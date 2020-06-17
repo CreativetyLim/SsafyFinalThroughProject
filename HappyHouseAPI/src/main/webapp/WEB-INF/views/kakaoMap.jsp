@@ -9,7 +9,7 @@
 <!-- javascript key=  2fb21910a1c6cdfb288e3da097ea7bab -->
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d116344b3fb196256cab17af15427d19"></script>
 <body>
-	<div id="map" style="width:500px;height:400px;"></div>
+	<div id="map" style="width:1200px;height:760px;"></div>
 	<script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -19,8 +19,8 @@
 			//// 지도 생성 파트 ///
 			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		    mapOption = { 
-		        center: new kakao.maps.LatLng(37.668140, 127.049940), // 지도의 중심좌표
-		        level: 3 // 지도의 확대 레벨
+		        center: new kakao.maps.LatLng(37.532969, 126.997944), // 지도의 중심좌표
+		        level: 5 // 지도의 확대 레벨
 		    };  
 		
 			var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다

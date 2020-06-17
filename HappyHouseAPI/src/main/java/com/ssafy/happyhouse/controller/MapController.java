@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @CrossOrigin(origins = { "*" }, maxAge = 6000)
 @Controller
-@RequestMapping("/test")
-public class HomeTestController {
+@RequestMapping("/map")
+public class MapController {
 	
-	@GetMapping("/home")
-	public String in() {
-		return "kakaoMap";
+	@GetMapping("/test")
+	public String map() {
+		return "location";
 	}
 }
