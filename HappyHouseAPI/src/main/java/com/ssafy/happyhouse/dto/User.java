@@ -6,7 +6,6 @@ public class User {
 	private String uName;			//유저 이름
 	private String uGender;			//유저 성별 (F or M값만 갖는다)
 	private String uTel;			//유저 전화번호
-	private String uAddr;			//유저 주소
 	
 	public String getuId() {
 		return uId;
@@ -37,11 +36,5 @@ public class User {
 	}
 	public void setuTel(String uTel) {
 		this.uTel = uTel;
-	}
-	public String getuAddr() {
-		return uAddr;
-	}
-	public void setuAddr(String uAddr) {
-		this.uAddr = uAddr;
 	}
 }

@@ -32,7 +32,8 @@ public class UserController {
 	
 //	Post방식으로 회원등록
 	@PostMapping("/register")
-	public int register(User user) {
+	public int register(User user){
+		System.out.println("Controller");
 		int result = userService.register(user);
 		return result;
 	}

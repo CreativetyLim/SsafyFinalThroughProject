@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService{
 	UserDAO userDAO;
 	@Override
 	public int register(User user) {
+		System.out.println("Servicesss");
 		return userDAO.register(user);
 	}
 

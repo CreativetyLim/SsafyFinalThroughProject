@@ -2,10 +2,11 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssafy.happyhouse.dao.UserDAO">
+
 	<!-- 회원정보 등록 -->
 	<insert id="register">
-	insert into User(uId, uPw, uName, uGender, uTel, uAddr) 
-		values (#{uId}, #{uPw}, #{uName}, #{uGender}, #{uTel}, #{uAddr})
+	insert into user(uId, uPw, uName, uGender, uTel) 
+	values (#{uId}, #{uPw}, #{uName}, #{uGender}, #{uTel})
 	</insert>
 	
 	<!-- 회원정보 수정 -->
@@ -16,7 +17,6 @@
 			uName = #{uName},
 			uGender = #{uGender},
 			uTel = #{uTel},
-			uAddr = #{uAddr}
 		where uId = #{uId}
 	</update>
 	
@@ -27,7 +27,7 @@
 	</delete>
 	
 	<!-- 로그인 -->
-	<select id="login">
+	<select id="login" resultType="int">
 		select uId, uPw
 		from User
 		where uId = #{uId}

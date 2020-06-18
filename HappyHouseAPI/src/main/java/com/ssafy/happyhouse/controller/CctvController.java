@@ -75,4 +75,27 @@ public class CctvController {
 	public List<cctv> search(String name) {
 		return ser.search(name);
 	}
+	
+	/*@GetMapping("/direction")
+	public List<cctv> direction(String name) {
+		
+		String urlstr = "";
+		URL url;
+		try {
+			url = new URL(urlstr);
+			HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+			urlConnection.setRequestMethod("GET");
+			BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(),"utf-8"));
+			
+			 JSONObject json = new JSONObject();
+		        json.put("data", br);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return ser.search(name);
+	}*/
+	
 }
