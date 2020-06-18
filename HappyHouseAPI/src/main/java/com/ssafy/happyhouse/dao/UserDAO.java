@@ -13,5 +13,5 @@ public interface UserDAO {
 //	회원정보 삭제
 	int delete(String uId);
 //	로그인
-	User login(User user);
+	int login(User user);
 }

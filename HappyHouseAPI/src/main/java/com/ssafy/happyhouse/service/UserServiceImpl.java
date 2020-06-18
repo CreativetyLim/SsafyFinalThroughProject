@@ -13,13 +13,14 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	UserDAO userDAO;
 	@Override
-	public int Register(User user) {
+	public int register(User user) {
+		System.out.println("Servicesss");
 		return userDAO.register(user);
 	}
 
 	@Override
 	public int update(User user) {
-		return userDAO.update(user);
+		return userDAO.register(user);
 	}
 
 	@Override
@@ -28,7 +29,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User login(User user) {
+	public int login(User user) {
 		return userDAO.login(user);
 	}
 

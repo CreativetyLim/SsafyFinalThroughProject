@@ -32,15 +32,16 @@ public class UserController {
 	
 //	Post방식으로 회원등록
 	@PostMapping("/register")
-	public int register(User user) {
-		int result = userService.Register(user);
+	public int register(User user){
+		System.out.println("Controller");
+		int result = userService.register(user);
 		return result;
 	}
 	
 //	회원정보 수정
 	@PutMapping("/editUser")
 	public int editUser(User user) {
-		int result = userService.Register(user);
+		int result = userService.register(user);
 		return result;
 	}
 	
@@ -53,15 +54,11 @@ public class UserController {
 	
 //	Post 로그인
 	@PostMapping("/login")
-	public User login(User user, HttpServletRequest req) {
-		User result = userService.login(user);
+	public int login(User user, HttpServletRequest req) {
+		int result = userService.login(user);
 		HttpSession session = req.getSession();
+		session.setAttribute("user", result);
 		
-		if(result == null) {
-			session.setAttribute("user", null);
-		}else {
-			session.setAttribute("user", result);
-		}
 		return result;
 	}
 	
@@ -69,6 +66,6 @@ public class UserController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();	
-		return "/index";
+		return "index";
 	}
 }
