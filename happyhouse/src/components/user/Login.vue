@@ -26,42 +26,33 @@
 export default {
     name: 'Login',
     data() {  
-        return {   
-            uId: '',
-            uPw: '',
+        return { 
+            User: {
+                uId: '',
+                uPw: '',
+            },
             msg: '',
             showAlert: false,
             errMsg: ''
         } 
     },
-    methods: {
-        onSubmit(){
-            if ( this.uId == '' ) {
-                this.showAlert = true;
-                this.errMsg = 'Please enter your username';
-                return;
-            }
-            if ( this.uPw == '' ) {
-                this.showAlert = true;
-                this.errMsg = 'Please enter the password';
-                return;
-            }
-            this.showAlert = false;
-            this.$store.dispatch('LOGIN', {uId, uPw})
-                .then(() => this.redirect())
-                .catch(({message}) => this.msg = message)
-            },
-            redirect(){
-                const {search} = window.location
-                const tokens = search.replace(/^\?/, '').split('&')
-                const {returnPath} = tokens.reduce((qs, tkn) => {
-                const pair = tkn.split('=')
-                qs[pair[0]] = decodeURIComponent(pair[1])
-                return qs
-            }, {})
+    // methods: {
+    //     onSubmit(){
+    //         this.$store.dispatch('LOGIN', {User})
+    //             .then(() => this.redirect())
+    //             .catch(({message}) => this.msg = message)
+    //         },
+    //         redirect(){
+    //             const {search} = window.location
+    //             const tokens = search.replace(/^\?/, '').split('&')
+    //             const {returnPath} = tokens.reduce((qs, tkn) => {
+    //             const pair = tkn.split('=')
+    //             qs[pair[0]] = decodeURIComponent(pair[1])
+    //             return qs
+    //         }, {})
 
-            this.$router.push(returnPath)
-        }
-    },
+    //         this.$router.push(returnPath)
+    //     }
+    // },
 }
 </script>
