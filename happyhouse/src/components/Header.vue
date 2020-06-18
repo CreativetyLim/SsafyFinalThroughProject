@@ -11,6 +11,7 @@
           <b-nav-item to="/Login">로그인</b-nav-item>
           <b-nav-item to="/SignUp">회원가입</b-nav-item>
           <b-nav-item to="/BoardTest">게시판</b-nav-item>
+          <b-nav-item to="/test/home"></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

@@ -1,6 +1,8 @@
 <template>
     <div id="BoardTest">
-        <button @click="testBtn">클릭</button>
+        <button @click="loadBoard">
+        더 보기
+        </button>
         <table class="table table-dark">
             <thead>
                 <tr class="text-center">
@@ -19,9 +21,11 @@
                 </tr>
             </tbody>
         </table>
+        <!--
         <div class="text-right">
             <b-button  @click="writeContent">글쓰기</b-button>
         </div>
+        -->
     </div>
     
 </template>
@@ -36,7 +40,7 @@ export default {
         }
     },
     methods: {
-        testBtn(){
+        loadBoard(){
             axios.get('http://localhost:9999/happyhouse/api/qna/selectAll')
             .then(res => {
                 this.qnaDatas = res.data;
@@ -49,6 +53,6 @@ export default {
             path: `/BoardCreate`
           });
         },
-    }   
+    },
 }
 </script>
